@@ -1,0 +1,509 @@
+﻿@import"../scss/variable.scss";
+
+/*#region product detail */
+.main-product {
+    .product-detail-container {
+        .img-banner {
+        }
+        /*
+        .product-gallery {
+            position: relative;
+            display: block;
+
+            &-box {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            @media (max-width: 991.98px) {
+                .product-gallery-box {
+                }
+            }
+        }
+*/
+        @media (max-width: 991.98px) {
+            .product-gallery {
+
+                &-box {
+                    text-align: center;
+
+                    img {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-info {
+        &__name {
+            color: $greenMain;
+            font-size: 1.8rem;
+            padding: 20px 0 10px 0;
+        }
+
+        &-rating {
+            display: flex;
+
+            li {
+                padding: 0 2px;
+
+                i {
+                    color: $yellowMain;
+                }
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            &__name {
+                text-align: center;
+            }
+
+            &-rating {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        .description-box {
+            display: flex;
+            justify-content: space-between;
+
+            &-qr {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100px;
+                    border: 1px solid rgba($greyMain,.3);
+                }
+            }
+
+            &-text {
+                p {
+                    text-align: justify;
+                }
+            }
+        }
+
+        .size-cotainer {
+            display: flex;
+            padding: 20px 0;
+
+            .size-box {
+                background-color: rgba($blackMain,0.05);
+                display: inline-flex;
+                flex-direction: column;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 0 10px 0 0;
+
+                .size-box-input {
+                    position: relative;
+                    padding-left: 35px;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    display: inline;
+                }
+                /* Hide the browser's default radio button */
+                .size-box-input input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    z-index: 10;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                }
+                /* Create a custom radio button */
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #eee;
+                    border-radius: 50%;
+                }
+                /* On mouse-over, add a grey background color */
+                .size-box-input:hover input ~ .checkmark {
+                    background-color: $greyMain;
+                }
+                /* When the radio button is checked, add a blue background */
+                .size-box-input input:checked ~ .checkmark {
+                    background-color: $greenMain;
+                }
+                /* Create the indicator (the dot/circle - hidden when not checked) */
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    background-color: $greenMain;
+                }
+                /* Show the indicator (dot/circle) when checked */
+                .size-box-input input:checked ~ .checkmark:after {
+                    display: block;
+                }
+                /* Style the indicator (dot/circle) */
+                .size-box-input .checkmark:after {
+                    top: 9px;
+                    left: 9px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $whiteMain;
+                }
+
+                .size-box-price {
+                    display: inline;
+
+                    span {
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        color: $greyMain;
+                    }
+
+                    sup {
+                        font-size: .9rem;
+                        font-weight: 500;
+                        color: rgba($greyMain,.4);
+                    }
+                }
+            }
+        }
+
+        .option {
+            padding: 20px 0;
+
+            .option-quatity {
+                display: flex;
+                align-items: center;
+
+                .option-quatity-item:nth-child(1) {
+                    padding-right: 10px;
+                }
+
+                .option-quatity-item:nth-child(2) {
+                    padding: 3px 5px;
+                    background-color: $greenMain;
+                    border: 1px solid $greenMain;
+                    border-radius: 7px 0 0 7px;
+                    color: $whiteMain;
+                }
+
+                .option-quatity-item:nth-child(3) {
+                    input {
+                        width: 50px;
+                        text-align: center;
+                        padding: 3px 0;
+                        border: 1px solid $greenMain;
+                    }
+                }
+
+                .option-quatity-item:nth-child(4) {
+                    padding: 3px 5px;
+                    background-color: $greenMain;
+                    border: 1px solid $greenMain;
+                    border-radius: 0px 7px 7px 0;
+                    color: $whiteMain;
+                }
+
+                .option-quatity-item:nth-child(5) {
+                    padding-left: 50px;
+
+                    i {
+                        color: $yellowMain;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        .ship-box {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid $yellowMain;
+            padding: 10px 0;
+            border-radius: 10px;
+
+            .ship-box-item {
+                padding: 5px 0 5px 15px;
+
+                i {
+                    font-size: 1.1rem;
+                }
+
+                span {
+                }
+            }
+        }
+
+        .button-box {
+            display: flex;
+            margin-top: 20px;
+
+            &-item:first-child {
+                background-color: $yellowMain;
+                padding: 10px 15px;
+                margin-right: 10px;
+                border-radius: 5px;
+
+                a {
+                    color: $whiteMain;
+                }
+            }
+
+            &-item:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $greenMain;
+                flex-grow: 1;
+                font-size: 1.2rem;
+                font-weight: 600;
+                border-radius: 5px;
+
+                a {
+                    color: $whiteMain;
+                }
+            }
+        }
+    }
+}
+/*#endregion */
+
+/*#region tab product */
+.tab-container {
+    .tab-left {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            &-item {
+                background-color: $whiteMain;
+                padding: 15px 0;
+                width: 100%;
+                margin: 10px 0;
+                box-shadow: 0 0 30px $boxshadow;
+                cursor: pointer;
+
+                i {
+                    color: $greyMain;
+                    margin: 0 10px 0 20px;
+                }
+
+                p {
+                    display: inline;
+                    color: $greyMain;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+
+            &-item.is-active {
+                background-color: $yellowMain;
+
+                i {
+                    color: $whiteMain;
+                }
+
+                p {
+                    color: $whiteMain;
+                }
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            &-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                &-item {
+                    width: 50%;
+                    padding: 5px 0;
+                    margin: 0;
+                    text-align: center;
+
+                    i {
+                        margin: 0 5px;
+                    }
+
+                    p {
+                    }
+                }
+
+                &-item.is-active {
+
+
+                    i {
+                    }
+
+                    p {
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-right {
+        max-height: 276px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 0 30px $boxshadow;
+        margin-top: 10px;
+
+        &-list {
+
+            &-item {
+                &-content {
+                    padding: 20px 20px 34px 20px;
+
+                    .section-top {
+                        font-size: 1.8rem;
+                        padding: 5px 0;
+                        color: $greenMain;
+                    }
+
+                    .title {
+                    }
+
+                    p {
+                        padding: 10px 0;
+                        font-weight: 400;
+                        letter-spacing: .45px;
+                        line-height: 1.5rem;
+                        color: $blackMain;
+                    }
+
+                    .hight-light-black {
+                        font-size: 1rem;
+                        color: $blackMain;
+                        font-weight: 700;
+                    }
+
+                    .hight-light-blue {
+                        font-size: 1rem;
+                        color: $blueProductDetail;
+                        font-weight: 700;
+                    }
+
+                    .hight-light-blue-u {
+                        font-size: 1rem;
+                        color: $blueProductDetail;
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+
+                    .text-i {
+                        font-style: italic;
+                    }
+
+                    .text-pointer {
+                        cursor: pointer;
+                    }
+
+                    ul {
+                        padding-left: 40px;
+
+                        li {
+                            list-style-type: disc;
+                        }
+                    }
+
+                    .table {
+                        thead {
+                            th:nth-child(2n+1) {
+                                div {
+                                    padding: 0.375rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-item.is-active {
+                display: block !important;
+
+                i {
+                }
+
+                p {
+                }
+            }
+        }
+
+        .see-more {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            padding: 80px 0 10px 0;
+            background: linear-gradient(transparent,$whiteMain 60%);
+            cursor: pointer;
+
+            a {
+                color: $greenMain;
+                position: relative;
+                font-weight: 600;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -18px;
+                    border-style: solid;
+                    border-width: 6px;
+                    border-color: $greenMain transparent transparent transparent;
+                    vertical-align: middle;
+                    transform: translateY(-30%);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .tab-right {
+            max-height: 240px;
+            margin-top: 0px;
+
+            &-list {
+
+                &-item {
+
+                    i {
+                    }
+
+                    p {
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-right.show-full {
+        max-height: 100% !important;
+
+        .see-more {
+            padding: 5px;
+            background-color: $whiteMain;
+
+            a {
+                &:after {
+                    border-color: transparent transparent $greenMain transparent;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+/*#endregion */
