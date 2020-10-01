@@ -994,6 +994,8 @@
             }
 
             .footer-left {
+                padding: 5px 0;
+
                 li {
                     padding-right: 3px;
 
@@ -1012,6 +1014,8 @@
             }
 
             .footer-right {
+                padding: 5px 0;
+
                 li {
                     padding: 0 10px;
 
@@ -1031,12 +1035,13 @@
                 }
             }
         }
-        /*@media (max-width: 1199.98px) {
+
+        @media (max-width: 488.98px) {
             .footer-bottom-box {
                 flex-direction: column;
                 align-items: center;
             }
-        }*/
+        }
     }
 }
 /*#endregion */

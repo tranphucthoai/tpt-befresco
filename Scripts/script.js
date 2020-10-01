@@ -152,7 +152,6 @@
     });
     $(".btn-plus").click(function () {
         var selectInput = $(".input-quatity");
-        debugger;
         var quatity = parseInt(selectInput.val().trim());
         selectInput.val(quatity + 1);
     });
@@ -162,8 +161,6 @@
         $(".tab-container .tab-left .tab-left-list .tab-left-list-item").removeClass("is-active");
         $(this).addClass("is-active");
 
-        //add and remove class tab right
-        //debugger;
         $(".tab-container .tab-right .tab-right-list .tab-right-list-item").removeClass("is-active");
 
 

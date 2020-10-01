@@ -1,8 +1,9 @@
 /*#region product detail */
-.main-product .product-detail-container {         /* .product-gallery { position: relative; display: block;
- &-box { position: absolute; bottom: 0; left: 0; }
- @media (max-width: 991.98px) { .product-gallery-box { } } }
-*/ }
+.main-product .product-detail-container .product-gallery { position: relative; display: block; }
+.main-product .product-detail-container .product-gallery-box { /*position: absolute;
+bottom: 0;
+left: 0;*/ }
+.main-product .product-detail-container .product-gallery-box img { width: 90%; }
 @media (max-width: 991.98px) { .main-product .product-detail-container .product-gallery-box { text-align: center; }
   .main-product .product-detail-container .product-gallery-box img { width: 40%; } }
 .main-product .product-info__name { color: #38b349; font-size: 1.8rem; padding: 20px 0 10px 0; }
@@ -15,8 +16,8 @@
 .main-product .product-info .description-box-qr { display: flex; align-items: center; justify-content: center; }
 .main-product .product-info .description-box-qr img { width: 100px; border: 1px solid rgba(85, 93, 101, 0.3); }
 .main-product .product-info .description-box-text p { text-align: justify; }
-.main-product .product-info .size-cotainer { display: flex; padding: 20px 0; }
-.main-product .product-info .size-cotainer .size-box { background-color: rgba(0, 0, 0, 0.05); display: inline-flex; flex-direction: column; border-radius: 10px; padding: 20px; margin: 0 10px 0 0; /* Hide the browser's default radio button */ /* Create a custom radio button */ /* On mouse-over, add a grey background color */ /* When the radio button is checked, add a blue background */ /* Create the indicator (the dot/circle - hidden when not checked) */ /* Show the indicator (dot/circle) when checked */ /* Style the indicator (dot/circle) */ }
+.main-product .product-info .size-cotainer { display: flex; padding: 20px 0; justify-content: center; flex-wrap: wrap; }
+.main-product .product-info .size-cotainer .size-box { background-color: rgba(0, 0, 0, 0.05); display: inline-flex; flex-direction: column; border-radius: 10px; padding: 20px; margin: 10px; /* Hide the browser's default radio button */ /* Create a custom radio button */ /* On mouse-over, add a grey background color */ /* When the radio button is checked, add a blue background */ /* Create the indicator (the dot/circle - hidden when not checked) */ /* Show the indicator (dot/circle) when checked */ /* Style the indicator (dot/circle) */ }
 .main-product .product-info .size-cotainer .size-box .size-box-input { position: relative; padding-left: 35px; cursor: pointer; font-size: 1.1rem; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; display: inline; }
 .main-product .product-info .size-cotainer .size-box .size-box-input input { position: absolute; opacity: 0; cursor: pointer; z-index: 10; top: 0; left: 0; height: 25px; width: 25px; }
 .main-product .product-info .size-cotainer .size-box .checkmark { position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #eee; border-radius: 50%; }

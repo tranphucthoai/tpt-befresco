@@ -5,15 +5,18 @@
     .product-detail-container {
         .img-banner {
         }
-        /*
+
         .product-gallery {
             position: relative;
             display: block;
 
             &-box {
-                position: absolute;
+                /*position: absolute;
                 bottom: 0;
-                left: 0;
+                left: 0;*/
+                img {
+                    width: 90%;
+                }
             }
 
             @media (max-width: 991.98px) {
@@ -21,7 +24,7 @@
                 }
             }
         }
-*/
+
         @media (max-width: 991.98px) {
             .product-gallery {
 
@@ -91,6 +94,8 @@
         .size-cotainer {
             display: flex;
             padding: 20px 0;
+            justify-content: center;
+            flex-wrap: wrap;
 
             .size-box {
                 background-color: rgba($blackMain,0.05);
@@ -98,7 +103,7 @@
                 flex-direction: column;
                 border-radius: 10px;
                 padding: 20px;
-                margin: 0 10px 0 0;
+                margin: 10px;
 
                 .size-box-input {
                     position: relative;
